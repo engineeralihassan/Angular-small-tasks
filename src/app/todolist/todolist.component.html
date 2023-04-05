@@ -1,0 +1,39 @@
+
+<div class="container12  ">
+<div class="container bg-info text-white p-3 mt-3">
+
+
+<form *ngIf="!isedit" class="d-flex " (ngSubmit)="addTodo()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">New Todo </label>
+    <input type="text" name="todo" [(ngModel)]="newTodo" class="form-control" 
+    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Todo">
+    <small id="emailHelp" class="form-text text-muted">write here what you want to add in your todos list </small>
+  </div>
+  <button class="addbtn" type="submit">Add </button>
+</form>
+<!-- // update form -->
+
+<form     *ngIf="isedit" class="d-flex "  (ngSubmit)=" updateFinal()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Update Todo </label>
+    <input type="text" name="todo" [(ngModel)]="editedtodo" class="form-control" 
+    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Todo ">
+   
+  </div>
+  <button class="addbtn" type="submit">Update</button>
+</form>
+</div>
+
+<div class="container bg-success text-white mt-5 ">
+      <h1>Your todays task is </h1>
+
+      <ul>
+            
+            <li class="d-flex" *ngFor="let todo of todos"> <div class="todo">{{todo}}</div> 
+                  <div class="btn">  <button class="actionbtn" (click)="editTodo(todo)">Edit</button>
+    <button (click)="deleteTodo(todo)" class="actionbtn">Delete</button></div></li>
+      </ul>
+
+</div>
+</div>

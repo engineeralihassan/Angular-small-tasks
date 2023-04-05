@@ -1,0 +1,47 @@
+.addbtn{
+
+      margin-left: 20px;
+      width: 100px;
+      height: 30px;
+      padding: 10px 20px  ;
+      background-color: blueviolet;
+      color: white;
+      margin-top: 1.8rem;
+      border: 0;
+      outline: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+}
+.container12{
+      border: 1px solid black;
+      padding: 1rem;
+      
+}
+
+.container {
+      width: 100%;
+      padding: 1rem;
+  
+
+}
+ul li{
+      background-color: cadetblue;
+      list-style:decimal;
+      margin-top: 5px;
+      padding: 10px 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+}
+li .actionbtn{
+      margin-left: 10px;
+      padding:4px  10px ;
+      background-color: black;
+      color: white;
+
+}
