@@ -1,0 +1,54 @@
+<div class="container-fluid  p-5 bg-success    " >
+      <h1 class="text-white">Cart Items : </h1>
+      <div class="row d-flex">
+  <div class="col-md-6 p-1 bg-info ">
+  <div class="product" *ngFor="let product of   products">
+    <div class="product-image">
+      <img [src]="product.image">
+    </div>
+    <div class="product-details">
+      <div class="product-title">{{product.name}}</div>
+        <div class="product-price">{{product.price}}</div>
+        <button (click)="addToCart(product)">Add To cart</button>
+    </div>   
+  </div>
+  </div>
+
+
+
+
+
+ 
+
+  
+    <div class="col-md-6 p-1 bg-light">
+     <h1>Totals Checkout</h1>
+     <h4 class="empty" *ngIf="cart.length <= 0">Please fill your cart</h4>
+     <div class="row" *ngIf="cart.length > 0">
+        <div class="product1" *ngFor="let item of cart">
+    <div class="product-image1">
+      <img [src]="item.image">
+    </div>
+    <div class="product-details1">
+      <div class="product-title">Product:  {{item.name}}</div>
+        <div class="product-price"> Price : {{item.subt}}</div>
+         <div class="product-price"> Quantity: {{item.quantity}}</div>
+
+        
+    </div>   
+  </div>
+  <hr>
+  <div class="totals">
+      <h3>sub-totals</h3>
+      <h3>{{totals}}</h3>
+  </div>
+     </div>
+
+
+    </div>
+      </div>
+    
+
+
+
+</div>

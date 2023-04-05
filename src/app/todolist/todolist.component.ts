@@ -11,6 +11,9 @@ export class TodolistComponent {
   isedit: boolean = false;
   editedtodo: string = "";
   editedTodoindex!: number;
+  query: string = '';
+  fiteredItems: string[] = this.todos;
+
   addTodo() {
     console.log(this.newTodo);
     if (this.newTodo == '') {
@@ -58,6 +61,18 @@ export class TodolistComponent {
     alert("Item is deleted ");
 
 
+
+  }
+
+  // search filter
+  search() {
+    console.log("hy");
+    if (!this.query) {
+      this.fiteredItems = this.todos;
+      console.log("empty");
+    }
+
+    this.fiteredItems = this.todos.filter(todo => todo.toLowerCase().includes(this.query.toLowerCase()));
 
   }
 

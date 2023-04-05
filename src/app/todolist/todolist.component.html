@@ -26,11 +26,15 @@
 </div>
 
 <div class="container bg-success text-white mt-5 ">
-      <h1>Your todays task is </h1>
+  <div class="inputcontainer mt-3 p-2">
+    <input type="text" name="query" (input)="search()"  [(ngModel)]="query" id="" placeholder="Enter search">
+
+  </div>
+      <h1 class="mt-4">Your todays task is </h1>
 
       <ul>
             
-            <li class="d-flex" *ngFor="let todo of todos"> <div class="todo">{{todo}}</div> 
+            <li class="d-flex" *ngFor="let todo of fiteredItems"> <div class="todo">{{todo}}</div> 
                   <div class="btn">  <button class="actionbtn" (click)="editTodo(todo)">Edit</button>
     <button (click)="deleteTodo(todo)" class="actionbtn">Delete</button></div></li>
       </ul>
