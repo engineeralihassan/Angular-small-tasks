@@ -1,0 +1,57 @@
+/* Set full width for outer and inner div */
+.outer, .inner {
+  width: 100%;
+}
+
+/* Center the inner div and remove margins */
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Set width for each card to 30% and add margin */
+.card {
+  width: 30%;
+  margin: 1%;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s;
+  padding: 20px;
+  text-align: center;
+  min-height:500px ;
+}
+
+/* Style the card elements */
+.card img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  height: 150px;
+
+  overflow: hidden;
+}
+.div{
+  border: 1px solid black;
+  padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.div small{
+  padding: 10px;
+  background-color: blueviolet;
+  color: azure;
+  border: 1px solid black;
+  margin-left: 10px;
+}

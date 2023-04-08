@@ -1,0 +1,17 @@
+<div class="outer">
+  <h1>Products</h1>
+  <div class="inner">
+    <div class="card" *ngFor="let product of data">
+      <img [src]="product.image">
+      <h2>{{product.title}}</h2>
+      <p>{{product.description}}</p>
+      <div class="div">
+            <small> Price :  {{product.price}} </small>
+            <small> cat:  {{product.category}}</small>
+      </div>
+    </div>
+    <!-- repeat the above card div 9 times for a total of 10 cards -->
+   
+  </div>
+  
+</div>
