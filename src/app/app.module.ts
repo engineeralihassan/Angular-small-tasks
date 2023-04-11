@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { ApiCallComponent } from './api-call/api-call.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BindingComponent } from './binding/binding.component';
 @NgModule({
   declarations: [
     AppComponent,
     TodolistComponent,
     CartComponent,
-    ApiCallComponent
+    ApiCallComponent,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
